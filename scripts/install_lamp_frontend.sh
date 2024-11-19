@@ -24,7 +24,6 @@ sudo apt install php libapache2-mod-php php-mysql -y
 #Hacemos un restart al servicio de apache para aplicar los cambios
 systemctl restart apache2
 
-
 #Copiamos el archivo de prueba de PHP en /var/www/html
 cp ../php/index.php /var/www/html
 
