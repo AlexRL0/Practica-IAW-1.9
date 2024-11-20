@@ -17,3 +17,6 @@ sudo apt install mysql-server -y
 
 # Configuramos el archivo etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i "s/127.0.0.1/$MYSQL_PRIVATE_IP/" /etc/mysql/mysql.conf.d/mysqld.cnf
+
+# Reiniciamos el servicio de MySQL
+systemctl restart mysql
