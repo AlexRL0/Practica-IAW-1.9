@@ -16,7 +16,7 @@ wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -
 chmod +x /tmp/wp-cli.phar
 
 # Movemos el script WP-CLI al directorio /usr/local/bin
-sudo mv /tmp/wp-cli.phar /usr/local/bin/wp
+mv /tmp/wp-cli.phar /usr/local/bin/wp
 
 # Eliminamos instalaciones previas en /var/www/html
 rm -rf ${WORDPRESS_DIRECTORY}/*
