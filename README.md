@@ -256,3 +256,11 @@ mysql -u root <<< "GRANT ALL PRIVILEGES ON $WORDPRESS_DB_NAME.* TO $WORDPRESS_DB
 ```
 ---
 ## Comprobación de que WordPress y el plugin funcionan
+
+![](imagenes/WordPress1-1.9.png)
+
+![](imagenes/WordPress2-1.9.png)
+
+![](imagenes/WordPress3-1.9.png)
+
+![](imagenes/WordPress4-1.9.png)
