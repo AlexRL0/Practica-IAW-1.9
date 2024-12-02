@@ -16,7 +16,7 @@ wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -
 chmod +x /tmp/wp-cli.phar
 
 # Movemos el script WP-CLI al directorio /usr/local/bin
-sudo mv /tmp/wp-cli.phar /usr/local/bin/wp
+mv /tmp/wp-cli.phar /usr/local/bin/wp
 
 # Eliminamos instalaciones previas en /var/www/html
 rm -rf ${WORDPRESS_DIRECTORY}/*
@@ -41,6 +41,9 @@ wp option update whl_page "$WORDPRESS_HIDE_LOGIN_URL" --path=$WORDPRESS_DIRECTOR
 
 # Configuramos los enlaces permanentes
 wp rewrite structure '/%postname%/' --path=$WORDPRESS_DIRECTORY --allow-root
+
+# Copiamos el archivo .htaccess
+cp ../htaccess/.htaccess $WORDPRESS_DIRECTORY
 
 # Cambiamos el propietario y el grupo al directorio /var/www/html/
 chown -R www-data:www-data /var/www/html/
