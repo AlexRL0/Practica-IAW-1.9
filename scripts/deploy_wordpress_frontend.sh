@@ -46,7 +46,7 @@ wp rewrite structure '/%postname%/' --path=$WORDPRESS_DIRECTORY --allow-root
 cp ../htaccess/.htaccess $WORDPRESS_DIRECTORY
 
 # Configuramos la variable https
-sed -i 
+sed -i "/COLLATE/a \$_SERVER['HTTPS'] = 'on';" /var/www/html/wp-config.php
 
 # Cambiamos el propietario y el grupo al directorio /var/www/html/
 chown -R www-data:www-data /var/www/html/
