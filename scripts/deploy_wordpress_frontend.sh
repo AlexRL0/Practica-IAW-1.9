@@ -45,5 +45,8 @@ wp rewrite structure '/%postname%/' --path=$WORDPRESS_DIRECTORY --allow-root
 # Copiamos el archivo .htaccess
 cp ../htaccess/.htaccess $WORDPRESS_DIRECTORY
 
+# Configuramos la variable https
+sed -i 
+
 # Cambiamos el propietario y el grupo al directorio /var/www/html/
 chown -R www-data:www-data /var/www/html/
